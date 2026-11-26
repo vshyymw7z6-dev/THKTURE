@@ -270,6 +270,22 @@
       .chip.alt { background: var(--pink-soft); color: var(--pink-deep); }
       .chip.alt2 { background: #d9f6f1; color: var(--teal-deep); }
 
+      /* 会员徽章（QQ 图标） */
+      .badge-box { display: flex; flex-wrap: wrap; gap: 12px; }
+      .badge-chip {
+        position: relative; width: 72px; height: 72px; flex: none;
+        border-radius: 16px; overflow: hidden;
+        background: #fff;
+        border: 1.5px solid rgba(255, 255, 255, 0.55);
+        box-shadow: 0 8px 20px rgba(84, 52, 110, 0.22), inset 0 1px 0 rgba(255, 255, 255, 0.9);
+        -webkit-backdrop-filter: blur(8px);
+        backdrop-filter: blur(8px);
+        transition: transform 0.4s var(--spring), box-shadow 0.4s var(--spring);
+        -webkit-tap-highlight-color: transparent;
+      }
+      .badge-chip img { width: 100%; height: 100%; object-fit: contain; display: block; }
+      .badge-chip:hover { transform: translateY(-3px) scale(1.08); box-shadow: 0 14px 28px rgba(84, 52, 110, 0.32); }
+
       /* 展示 SHOW 四格 */
       .show-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
       .slot {
@@ -457,6 +473,29 @@
           <div class="tags" id="tagsWrap"></div>
         </section>
 
+        <!-- 我的徽章 -->
+        <section class="card glass" aria-label="我的徽章">
+          <div class="sec-title"><h2>我的徽章</h2><span class="en">BADGES</span><span class="rule"></span></div>
+          <div class="badge-box">
+            <span class="badge-chip"><img src="vip/10 (11).png" alt="徽章" loading="lazy"></span>
+            <span class="badge-chip"><img src="vip/10 (6).png" alt="徽章" loading="lazy"></span>
+            <span class="badge-chip"><img src="vip/10 (1).png" alt="徽章" loading="lazy"></span>
+            <span class="badge-chip"><img src="vip/10 (2).png" alt="徽章" loading="lazy"></span>
+            <span class="badge-chip"><img src="vip/10 (3).png" alt="徽章" loading="lazy"></span>
+            <span class="badge-chip"><img src="vip/10 (4).png" alt="徽章" loading="lazy"></span>
+            <span class="badge-chip"><img src="vip/10 (5).png" alt="徽章" loading="lazy"></span>
+            <span class="badge-chip"><img src="vip/10 (7).png" alt="徽章" loading="lazy"></span>
+            <span class="badge-chip"><img src="vip/10 (9).png" alt="徽章" loading="lazy"></span>
+            <span class="badge-chip"><img src="vip/10 (10).png" alt="徽章" loading="lazy"></span>
+            <span class="badge-chip"><img src="vip/10 (12).png" alt="徽章" loading="lazy"></span>
+            <span class="badge-chip"><img src="vip/10 (13).png" alt="徽章" loading="lazy"></span>
+            <span class="badge-chip"><img src="vip/10.png" alt="徽章" loading="lazy"></span>
+            <span class="badge-chip"><img src="vip/9.png" alt="徽章" loading="lazy"></span>
+            <span class="badge-chip"><img src="vip/3.webp" alt="徽章" loading="lazy"></span>
+            <span class="badge-chip"><img src="vip/4.webp" alt="徽章" loading="lazy"></span>
+          </div>
+        </section>
+
         <!-- 展示 SHOW -->
         <section class="card glass" aria-label="展示">
           <div class="sec-title"><h2>展示</h2><span class="en">SHOW</span><span class="rule"></span></div>
@@ -497,7 +536,7 @@
          ★ 资料配置（公开版）：想改内容，直接改这里再重新上传即可
          ============================================================ */
       var CONFIG = {
-        avatar: "",            // 头像外链：把你的头像图片链接粘到引号里（https://…），留空 = 用默认立绘当头像
+        avatar: "https://image.rlyun.fun/view.php/b73a77dd80d3044008d2b84988957aeb",            // 头像外链：把你的头像图片链接粘到引号里（https://…），留空 = 用默认立绘当头像
         name: "THUOEGR",       // 显示的名字
         level: "Lv. 520",      // 个人等级（装饰用，随便改）
         uid: "0000001",        // UID 编号，右边有复制按钮
@@ -505,10 +544,11 @@
         plate: "签名",          // 粉色签名牌左边的小标签
         sign: "风总是轻飘飘的, 留不住每个人",  // 粉色签名牌上的签名
         about: "你好呀，这里是我的个人主页。\n平时喜欢玩游戏、看动漫，也会做一些游戏视频和工具分享。\n欢迎进下面的 TG 群一起聊天～",  // 「关于我」介绍
-        tags: ["游戏玩家", "视频创作", "二次元", "夜猫子"],  // 标签，想加想删直接改这个数组
+        tags: ["游戏玩家", "视频创作", "编程", "夜猫子"],  // 标签，想加想删直接改这个数组
         groups: [              // TG 群聊：name 群名、desc 一句说明、link 群链接
           { name: "交流群 · 主频道", desc: "主频道、脚本分享，欢迎各位", link: "https://t.me/THYYUOEGR" },
-          { name: "交流群 · 一群", desc: "此群是交流频道，可以自由聊天", link: "https://t.me/+F9znCb-kw244NTM1" }
+          { name: "交流群 · 一群", desc: "此群是交流频道，可以自由聊天", link: "https://t.me/+F9znCb-kw244NTM1" },
+          { name: "分享群 · 一群", desc: "此群分享一些老外脚本", link: "https://t.me/+dcmaVc1fVZExMTZl" }
         ]
       };
 
